@@ -73,3 +73,9 @@ logs/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+
+# Documents
+*.docx
+*.doc
+*.pdf
+docs/
