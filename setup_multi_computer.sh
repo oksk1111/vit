@@ -121,9 +121,31 @@ else
     echo "  Windows: winget install GitHub.cli"
 fi
 
-# 5. 토큰 설정 스크립트 실행
+# 5. Python 가상환경 설정
 echo ""
-echo "🔑 5. 토큰 설정"
+echo "🐍 5. Python 가상환경 설정"
+if [ -d ".venv" ]; then
+    echo "✅ 가상환경이 이미 존재합니다."
+else
+    echo "가상환경을 생성하시겠습니까? (y/n)"
+    read -r create_venv
+    
+    if [ "$create_venv" = "y" ]; then
+        echo "Python 가상환경을 생성 중..."
+        python3 -m venv .venv
+        
+        echo "의존성 패키지를 설치 중..."
+        .venv/bin/python -m pip install --upgrade pip
+        .venv/bin/python -m pip install -r requirements.txt
+        
+        echo "✅ 가상환경 설정이 완료되었습니다!"
+        echo "💡 가상환경 활성화: ./activate_env.sh"
+    fi
+fi
+
+# 6. 토큰 설정 스크립트 실행
+echo ""
+echo "🔑 6. 토큰 설정"
 echo "Python 토큰 설정 스크립트를 실행하시겠습니까? (y/n)"
 read -r run_python_setup
 

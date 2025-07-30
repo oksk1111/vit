@@ -20,6 +20,12 @@ cd vit_test
 # 의존성 설치
 pip install -r requirements.txt
 
+# 또는 가상환경 사용 (권장)
+python3 -m venv .venv
+source .venv/bin/activate  # Linux/macOS
+# .venv\Scripts\activate   # Windows
+pip install -r requirements.txt
+
 # 멀티 컴퓨터 환경 설정 (선택사항)
 ./setup_multi_computer.sh
 ```
@@ -27,6 +33,16 @@ pip install -r requirements.txt
 > 💡 **여러 컴퓨터에서 작업하시나요?** [보안 토큰 관리 가이드](SECURITY.md)를 확인하세요!
 
 ## 🎯 빠른 시작
+
+### 0. 가상환경 활성화 (권장)
+
+```bash
+# 가상환경 활성화 (이미 생성되어 있다면)
+./activate_env.sh
+
+# 또는 수동으로
+source .venv/bin/activate
+```
 
 ### 1. CIFAR-10으로 기본 훈련
 
