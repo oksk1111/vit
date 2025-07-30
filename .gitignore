@@ -79,3 +79,8 @@ logs/
 *.doc
 *.pdf
 docs/
+
+# 환경 변수 파일
+.env
+.env.local
+.env.*.local
