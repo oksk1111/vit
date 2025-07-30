@@ -1,4 +1,4 @@
-# ViT - Vision Transformer Implementation and Fine-tuning
+# ViT Test - Vision Transformer Implementation and Fine-tuning
 
 이 프로젝트는 Hugging Face의 Vision Transformer (ViT) 모델을 활용한 이미지 분류 시스템입니다. CIFAR-10 데이터셋으로 학습하고, 추후 의료 데이터로 쉽게 교체하여 재학습할 수 있도록 설계되었습니다.
 
@@ -14,8 +14,8 @@
 
 ```bash
 # 저장소 클론
-git clone https://github.com/oksk1111/vit.git
-cd vit
+git clone https://github.com/oksk1111/vit_test.git
+cd vit_test
 
 # 의존성 설치
 pip install -r requirements.txt
