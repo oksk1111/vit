@@ -84,3 +84,13 @@ docs/
 .env
 .env.local
 .env.*.local
+
+# Large result directories
+notebook_results/
+vit_classifier_results/
+test_results/
+
+# Temporary files
+tmp_trainer/
+*.tmp
+*.temp
